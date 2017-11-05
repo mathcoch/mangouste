@@ -3,8 +3,8 @@ function dropZoneInit(){
   $("#file-dropzone").dropzone({
     addRemoveLinks: true,
     paramName: "photo[file]",
-    maxFiles: 1,
+    maxFiles: 50,
     acceptedFiles: "image/*,.pdf,.doc,.docx",
-    maxFilesize: 3 // MB
+    maxFilesize: 100 // MB
   });
 };
