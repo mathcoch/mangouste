@@ -1,0 +1,10 @@
+function dropZoneInit(){
+  Dropzone.autoDiscover = false;
+  $("#file-dropzone").dropzone({
+    addRemoveLinks: true,
+    paramName: "photo[file]",
+    maxFiles: 1,
+    acceptedFiles: "image/*,.pdf,.doc,.docx",
+    maxFilesize: 3 // MB
+  });
+};

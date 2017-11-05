@@ -1,0 +1,27 @@
+<% content_for(:title_tag) do %>
+  <%= "Déposer de superbes photos" %>
+<% end %>
+
+<div class="photo-new">
+  <%= simple_form_for @photo, html: { class:"dropzone",
+                              id:"file-dropzone" } do |f| %>
+    <%= f.input :name, label: 'Quel est votre nom?' %>
+
+    <div class="dz-message needsclick">
+      <p>Glisser-déposer vos images (ou autres ici)</br><i class="fa fa-file text-medium" aria-hidden="true"></i></p>
+    </div>
+    <div class="fallback">
+      <%= f.file_field :file %>
+      <%= f.submit "Envoyer", class: "btn secondary-btn pull-right" %>
+    </div>
+  <% end %>
+</div>
+<%= link_to 'Un problème contactez-nous', 'mailto: contact@christian-a-60ans.com', class:'no-decoration' %>
+
+<% content_for(:after_js) do %>
+  <script >
+    $(document).ready(function(){
+      dropZoneInit();
+    });
+  </script>
+<% end %>

@@ -1,1 +1,32 @@
 // Specific CSS for your home-page
+body{
+  background-color: $gray;
+  color: white;
+}
+form.dropzone{
+  border-width: 4px;
+  border-color: $orange;
+  border-radius: 20px;
+  background-color: white;
+  margin: 40px 10px;
+  color: $gray;
+  p{
+    font-weight: lighter;
+    color: $gray;
+    font-size: 16px;
+  }
+  &:hover{
+    border-color: $green;
+    p{
+      color: $gray;
+    }
+  }
+}
+.no-decoration{
+  color: white;
+  text-align: center;
+  &:hover{
+    color: $orange;
+  text-decoration: none;
+  }
+}
